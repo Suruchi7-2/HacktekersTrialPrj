@@ -11,18 +11,18 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  //home page will include here
-  res.send("Hello World");
+    //home page will include here
+    res.render("home");
 });
 
 app.get("/login", (req, res) => {
-  //login page will include here
-  res.render("auth/login");
+    //login page will include here
+    res.render("auth/login");
 });
 app.get("/signup", (req, res) => {
-  res.render("auth/signup");
+    res.render("auth/signup");
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });

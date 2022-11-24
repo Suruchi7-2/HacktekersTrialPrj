@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    background-image: url('../img/images/StopHacking.jpg');
+    /* filter: blur(2px); */
+}
+
+
+/* .container span {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    background-image: url('../images/StopHacking.jpg');
+    filter: blur(2px);
+} */
+
+
+/* .back {
+    background-size: cover;
+    height: 100vh;
+    filter: blur(2px);
+    padding-top: 70px;
+    width:100vh;
+} */
+
+.navbar {
+    height: 100px;
+    width: 100%;
+    /* background: rgba(53, 18, 106, 0.3); */
+    background: rgba(23, 4, 6, 0.8);
+}
+
+.logo {
+    width: 95px;
+    height: 100px;
+    padding: 0px 40px;
+}
+
+
+/* .navbar h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 30px;
+    text-align: center;
+    font-family: 'roboto', 'sans serif';
+    float: left;
+} */
+
+.navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 110px;
+}
+
+.nav {
+    font-size: 16px;
+    color: white;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    padding: 6px 13px;
+    font-family: 'roboto', 'sans-serrif';
+    /* margin-top: 50px; */
+}
+
+.navbar ol li a {
+    text-decoration: none;
+    color: rgba(17, 232, 185, 0.5);
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 14px;
+    font-family: 'Britannic Bold';
+    margin: 8px 0px 6px 5px;
+}
+
+
+/* .navbar ul li a.active */
+
+.navbar ul li a:hover {
+    background: rgb(5, 172, 233);
+    border-radius: 2px;
+}
+
+.container .center {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-family: sans sans-serif;
+    user-select: none;
+}
+
+.center h1 {
+    color: rgb(125, 244, 6);
+    font-size: 70px;
+    font-weight: bold;
+    width: 900px;
+    text-align: center;
+}
+
+.center h1 {
+    color: rgb(243, 247, 243);
+    font-size: 65px;
+    font-weight: bold;
+    width: 885px;
+    text-align: center;
+    margin-top: 480px;
+    margin-left: 70px;
+    margin-right: 80px;
+}
+
+.center h2 {
+    color: rgb(7, 254, 250);
+    font-size: 55px;
+    font-weight: bold;
+    width: 885px;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 70px;
+    /* margin-right: 80px; */
+}
+
+.center .button {
+    margin: 35px 280px;
+}
+
+.buttons button {
+    height: 60px;
+    width: 170px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background: black;
+    border: 1px solid #0e0d0d;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .5s;
+    /* margin-right: 500px; */
+}
+
+.buttons .btn {
+    margin-left: 420px;
+}
+
+
+/* .buttons .btn1 {
+    margin-right: 15px;
+} */
+
+.buttons button:hover {
+    background: rgb(6, 198, 246);
+}
+
+
+/* .container1 {
+    width: 100%;
+    height: 100vh;
+    background: rgba(179, 174, 198, 0.8);
+    position: relative;
+} */
+
+
+/* .tit { */
+
+
+/* margin-top: 400px; */
+
+
+/* padding: 80px; */
+
+
+/* color: #0f0c0c;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.view-box {
+    width: 900px;
+    height: 400px;
+    border-radius: 220px;
+    position: relative;
+    top: 20%;
+    left: 25%;
+    transform: trnslate(-50%, -50%);
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    background: rgb(26, 1, 42);
+    /* margin-right: 80px; */
+
+
+/* margin-top: 20px; */
+
+
+/* } */
+
+
+/* .user {
+    width: 800px;
+    text-align: center;
+    padding: 20px 70px;
+    box-sizing: border-box;
+    background: #321764;
+    border-radius: 200px;
+    box-sizing: 0 10px 20px -5px #00000061;
+}
+
+.space {
+    margin-top: 70px;
+} */
+
+
+/* css reviews section */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*>* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-dark: #0b0218;
+    --color-secondary-dark: #464c70;
+    --color-primary: #05f1f1;
+    --color-text: #c2c2d1;
+    --color-light: #ffffff;
+}
+
+.container1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../images/Hackdetect.jpg'); */
+    background-color: rgba(219, 218, 231, 0.4);
+    /* filter: blur(0.1px); */
+}
+
+.board {
+    max-width: 980px;
+    width: 100%;
+    background-color: var(--color-dark);
+    text-align: center;
+    border-radius: 8px;
+    padding: 4em 0;
+    height: 450px;
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+.swiper {
+    width: 700px;
+    height: auto;
+}
+
+.swiper .swiper-slide .flex {
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper .swiper-slide .comments {
+    background-color: white;
+    padding: 1.5em 2em;
+    width: 50%;
+    border-radius: 5px;
+    font-size: .9em;
+    position: relative;
+}
+
+.swiper .swiper-slide .comments::after {
+    content: "";
+    position: absolute;
+    bottom: -19px;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--color-light);
+    z-index: -99;
+    margin-left: 150px;
+}
+
+.swiper .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.swiper .profile img {
+    width: 40%;
+    border-radius: 50%;
+    border: 5px solid var(--color-primary);
+    margin: 10px 0;
+}
+
+.swiper .profile>a {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+.swiper .profile>span {
+    color: var(--color-text);
+    font-size: .8em;
+}
+
+.swiper .swiper-button-prev,
+.swiper-button-next {
+    color: var(--color-text);
+}
+
+
+/* @media(min-width:320px) {
+    .board {
+        width: auto;
+    }
+    .swiper {
+        width: 320px;
+    }
+    .board>h1.p {
+        padding: 0.2em;
+    }
+} */
