@@ -11,7 +11,14 @@
     <section>
         <div class="form-container">
             <h1>Login</h1>
-    <form action="/login" method="POST">
+           <!-- <div class="button-box">
+            <div id="btn-toggle">
+
+            </div>
+            <a  href="/login" class="toggle-btn">Login</a>
+            <a  href="/signup" class="toggle-btn">Signup</a>
+           </div> -->
+    <form action="/login" method="POST" >
       <div class="control">
       <label for="email">Email or Username</label>
         <input type="text" name="email" id="email" />
@@ -27,12 +34,10 @@
            
              <input type="submit" value="Login" />
     </form>
-    <div class="link">
-        <a href="/forgot">Forgot password</a>
-    </div>
-    <div class="link"> 
-        <a href="/register">Create an account</a>
-    </div>
+      <div class="link">
+        <a href="/signup">Creat an account</a>
+      </div>
+    
         </div>
     </section>
   </body>

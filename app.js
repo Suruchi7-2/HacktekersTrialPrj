@@ -19,6 +19,9 @@ app.get("/login", (req, res) => {
   //login page will include here
   res.render("auth/login");
 });
+app.get("/signup", (req, res) => {
+  res.render("auth/signup");
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
