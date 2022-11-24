@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | connects with us</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <section>
+        <div class="form-container">
+            <h1>Login</h1>
+    <form action="/login" method="POST">
+      <div class="control">
+      <label for="email">Email or Username</label>
+        <input type="text" name="email" id="email" />
+      </div>
+      <div class="control">
+        <label for="email">Password</label>
+          <input type="password" name="pass" id="pass" />
+        </div>
+        <span>
+            <input type="checkbox" name="" id="">Remember me.
+        </span>
+        <div class="control">
+           
+             <inpusubmit type="submit" value="Login" />
+    </form>
+    <div class="link">
+        <a href="/forgot">Forgot password</a>
+    </div>
+    <div class="link"> 
+        <a href="/register">Create an account</a>
+    </div>
+        </div>
+    </section>
+  </body>
+</html>
