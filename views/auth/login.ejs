@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | connects with us</title>
-    <link rel="stylesheet" href="css/login.css" />
+  <%- include('../partials/head') %>
+
   </head>
   <body>
-    <section>
+  
+    <div class="container">
+    <!-- <section> -->
+      <span class="bg"></span>
+      <%- include('../partials/navbar') %>
         <div class="form-container">
             <h1>Login</h1>
            <!-- <div class="button-box">
@@ -20,6 +18,9 @@
            </div> -->
     <form action="/login" method="POST" >
       <div class="control">
+       <% if(msg){ %>
+        <span><%=msg %></span>
+        <%}%>
       <label for="email">Email or Username</label>
         <input type="text" name="email" id="email" />
       </div>
@@ -39,6 +40,8 @@
       </div>
     
         </div>
-    </section>
+    <!-- </section> -->
+    </div>
+
   </body>
 </html>
