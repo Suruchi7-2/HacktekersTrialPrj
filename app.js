@@ -29,6 +29,37 @@ app.get("/login", (req, res) => {
     oldInput: { aname: null, email: null, pass: null },
   });
 });
+
+app.post("/login", (req, res) => {
+  const email = req.body.email;
+  const password = req.body.pass;
+  const validationErrors = validationResult(req);
+  if (!validationErrors.isEmpty()) {
+    return res.status(422).render("auth/login", {
+      msg: validationErrors.array()[0].msg,
+      oldInput: { email: email, pass: password },
+    });
+  }
+  User.findOne({ email: email }).then((user) => {
+    if (!user) {
+      return res.status(422).render("auth/login", {
+        msg: "Invalid email or password",
+        oldInput: { email: email, pass: password },
+      });
+    }
+
+    bcrypt.compare(password, user.password).then((doMatch) => {
+      if (!doMatch) {
+        return res.status(422).render("auth/login", {
+          msg: "Invalid email or password",
+          oldInput: { email: email, pass: password },
+        });
+      }
+      res.redirect("/");
+    });
+  });
+});
+
 app.get("/signup", (req, res) => {
   res.render("auth/signup", {
     msg: null,
@@ -60,13 +91,14 @@ app.post(
       });
     }
 
-    const u = User.findOne({ email: email });
-    if (u) {
-      return res.render("auth/signup", {
-        msg: "Email already exists",
-        oldInput: { aname: name, email: email, pass: password },
-      });
-    }
+    User.findOne({ email: email }).then((user) => {
+      if (user) {
+        return res.render("auth/signup", {
+          msg: "Email already exists",
+          oldInput: { aname: name, email: email, pass: password },
+        });
+      }
+    });
 
     return bcrypt
       .hash(password, 13)
