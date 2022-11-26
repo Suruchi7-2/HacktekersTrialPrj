@@ -4,13 +4,22 @@ const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const express = require("express");
 const { validationResult } = require("express-validator");
-
+const session = require("express-session");
+const MongoDBstore = require("connect-mongodb-session")(session);
 const { body } = require("express-validator");
 
 const PORT = 5000;
 
+const MONGODB_URI = "mongodb://localhost:27017/hacktechers";
+
 const app = express();
 
+//session for orgainzeer
+const oSessionStore = new MongoDBstore({
+  //calling constructor
+  uri: MONGODB_URI,
+  collection: "osession",
+});
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -116,6 +125,10 @@ app.post(
       });
   }
 );
+
+app.use((req, res, next) => {
+  res.status(404).render("404");
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
