@@ -7,6 +7,7 @@ const { validationResult } = require("express-validator");
 const session = require("express-session");
 const MongoDBstore = require("connect-mongodb-session")(session);
 const { body } = require("express-validator");
+const isLoggedInReq = require("./middleware/islogin");
 
 const PORT = 5000;
 
@@ -25,6 +26,33 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 app.set("view engine", "ejs");
+
+app.use(
+  session({
+    secret: "My secret is awsome",
+    resave: false,
+    saveUninitialized: false,
+    store: oSessionStore,
+  })
+);
+
+app.use((req, res, next) => {
+  if (!req.session.user) {
+    return next();
+  }
+  User.findById(req.session.user._id)
+    .then((user) => {
+      req.user = user;
+      next();
+    })
+    .catch((err) => console.log(err));
+});
+//local variable
+app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.session.isLoggedIn;
+
+  next();
+});
 
 app.get("/", (req, res) => {
   //home page will include here
@@ -49,7 +77,7 @@ app.post("/login", (req, res) => {
       oldInput: { email: email, pass: password },
     });
   }
-  User.findOne({ email: email }).then((user) => {
+  User.findOne({ email: email.toLowerCase() }).then((user) => {
     if (!user) {
       return res.status(422).render("auth/login", {
         msg: "Invalid email or password",
