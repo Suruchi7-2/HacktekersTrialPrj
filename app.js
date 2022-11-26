@@ -164,6 +164,9 @@ app.post(
       });
   }
 );
+app.get("/blog", (req, res) => {
+  res.render("blog", { user: req.user });
+});
 
 app.use((req, res, next) => {
   res.status(404).render("404");
