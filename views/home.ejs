@@ -1,130 +1,142 @@
+<!DOCTYPE html>>
+<html>
 
-<%- include('partials/head') %>
-
+<head>
+    <meta name="viewport" content="with=device-width , initial-scale=1.0">
+    <title>hacktekers</title>n
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
-
-    <div class="container">
-        <span class="bg"></span>
-        <!-- <img class="back" src="images/Hackdetect.jpg"> -->
-
-        <%- include('partials/navbar') %> 
-        <div class="center">
-            <h1>Welcome to SafeHack</h1>
-            <h2>Cross Blackhat</h2>
-            <div class="buttons">
-                <!-- <button class="btn1">Get Started</button> -->
-                <button class="btn">Get Started</button>
-
+    <section class="header">
+        <nav>
+            <a href="home.html"><img src="images/logo.jpg" width="105" height="98"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us </a></li>
+                </ul>
             </div>
-
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>HACKTEKERS</h1>
+            <P>“Quantum Encryption is essential to protect our digital assets and infrastructure from attackers.”</P>
+            <!-----<a href="" class="hero-btn">Continue</a>---->
         </div>
-    </div>
-    <!-- <div class="container1">
-        <P class="tit">Our Reviews</P>
-        <div class="view-box">
-            <div id="testimonials">
-                <div class="user">
-                    <img src="images/logo.jpg" alt="">
-                    <p>dhgvubjiuiuvyuvytyctcgfyyg hhvycrrcfsgdewwe vdggggccvghev jbdgu ewdyufgei jeihec gcuhiucho jhfcoiewo qiuwtwedhwne bcsigvufe
+    </section>
+    <!--------services we provide-------->
+    <section class="course">
+        <h1>services we provide</h1>
+        <p>Following are some of the services provided by hacktekers</p>
 
-                    </p>
-                    <h3>suuchi</h3>
-                </div>
 
-                <div class="user space">
-                    <img src="images/log1.jpg" alt="">
-                    <p>dhgvubjiuiuvyuvytyctcgfyyg</p>
-                    <h3>Shreya</h3>
-                </div>
-
-                <div class="user">
-                    <img src="images/logo.jpg" alt="">
-                    <p>dhgvubjiuiuvyuvytyctcgfyyg</p>
-                    <h3>pankhuri</h3>
-                </div>
+        <div class="row">
+            <div class="course-col">
+                <h3>Training</h3>
+                <p>We provide Training on various courses along with certifications.<br>Visit the site for complete details about corses.</p>
+            </div>
+            <div class="course-col">
+                <h3>Seminar</h3>
+                <p>our company offers for seminars on some of the severe problems in our society.</p>
+            </div>
+            <div class="course-col">
+                <h3>Expert Talk</h3>
+                <p>Each nd every company is required to do the same for their employeess in order to empower them.</p>
             </div>
         </div>
+    </section>
 
-    </div> -->
+    <!-----Testimonials-->
+    <section class="testimonials">
+        <h1>What our student says</h1>
+        <p>Having a quick review over what the visitors would love to say about us.</p>
 
+        <div class="row">
+            <div class="testiminial-col">
+                <img src="images/user1.png">
+                <div>
+                    <p>It is one of the best company in the field of cyber security.<br>Faculty is really helpfull and supportive.</p>
+                    <h3>Tokyo</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
 
-    <!-- Review section -->
-
-    <div class="container1" id="#reveiws">
-        <h1>reveiws
-        </h1>
-        <div class="board">
-            <h2 class="text-light">What Exp. People Say About us....</h2>
-            <hr>
-            <hr>
-
-            <p class="text-light"><br>If you are having any doubt to get in touch with us<br> then go through these auspecious reviews </p>
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="flex">
-                            <div class="comments">
-                                We must say! This an excellent site for a fresher to learn and grow as a professional in CyberSecurity. The hikes are good and the company is growing at an exponential pace. You can work on interesting projects.
-                            </div>
-                            <div class="profile">
-                                <img src="images/logo.jpg" alt="">
-                                <a href="#">HacktekersPro</a>
-                                <span>Cyber-Organisation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="flex">
-                            <div class="comments">
-                                An effective platform for large organisation, to help manage mallicious attacks, provides effective realistic points for prevention
-
-                            </div>
-                            <div class="profile">
-                                <img src="images/protect.jpg" alt="">
-                                <a href="#">ShieldTech</a>
-                                <span>CyberCafe</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="swiper-slide">
-                        <div class="flex">
-                            <div class="comments">
-                                We must say thanks!!! that this will become my base for starting our platform and in current we are in touch with too cyber influencer
-                            </div>
-                            <div class="profile">
-                                <img src="images/logo1.jpg" alt="">
-                                <a href="#">ProtectionCamp</a>
-                                <span>Company</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    ...
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+            <div class="testiminial-col">
+                <img src="images/user2.jpeg">
+                <div>
+                    <p>This company is just awsome at one end.<br>It's environment of working and faculty is just awsome.</p>
+                    <h3>Berlin</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
             </div>
         </div>
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    </section>
+
+    <!------Contact Us------>
+    <section class="cta">
+        <h1>For any query contact us.</h1>
+        <a href="" class="hero-btn">Contact Us</a>
+
+    </section>
+
+    <!-------footer------->
+    <section class="footer">
+        <h2>About Us</h2>
+        <p>
+            Knowing about Hacktekers.
+            <br>
+
+        </p>
+        <p></p>
+        <div class="icons">
+            <a href="#"><i class = "fab fa-facebook"></i></a>
+            <a href="#"><i class = "fab fa-twitter"></i></a>
+            <a href="#"><i class = "fab fa-instagram"></i></a>
+            <a href="#"><i class = "fab fa-pinterest"></i></a>
+            <p>
+                <br>
+
+            </p>
+        </div>
+        <a href="aboutus.html" class="hero-btn">Continue</a>
+        <p>
+            <br>
+        </p>
+        <p>made with <i class="fa fa-heart"></i> by team </p>
+    </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
 </body>
 
 </html>
