@@ -56,7 +56,7 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res) => {
   //home page will include here
-  res.render("home");
+  res.render("home", { user: req.user });
 });
 
 app.get("/login", (req, res) => {
@@ -92,8 +92,19 @@ app.post("/login", (req, res) => {
           oldInput: { email: email, pass: password },
         });
       }
-      res.redirect("/");
+      req.session.isLoggedIn = true;
+      req.session.user = user;
+      return req.session.save((err) => {
+        //  console.log(err);
+        res.redirect("/");
+      });
     });
+  });
+});
+app.post("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    // console.log(err);
+    res.redirect("/");
   });
 });
 

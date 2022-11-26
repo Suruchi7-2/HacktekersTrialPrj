@@ -364,3 +364,19 @@
 	background: rgb(256, 176,176);
 	color: red;
   }
+
+  .control1 input[type="submit"]{
+    background: rgb(237, 54, 54);
+    color: #222;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: .7;
+    font-size: 1.2em;
+    transition:  opacity .3s ease;
+    padding: 4px;
+}
+
+.control1 input[type="submit"]:hover{
+    opacity: 1;
+}
