@@ -10,6 +10,6 @@ npm i
 ```bash
 npm start
 ```
-
+blog.suruchi.tech
 
 Code with ❤
