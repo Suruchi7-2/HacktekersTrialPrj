@@ -35,30 +35,32 @@
 </nav> -->
 
 <nav>
-  <a href="/"><img src="images/logo.jpg" width="105" height="98" /></a>
-  <div class="nav-links" id="navLinks">
-    <i class="fa fa-times" onclick="hideMenu()"></i>
-    <ul>
-      <li><a href="/">home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/contact">Contact Us </a></li>
-      <% if(isAuthenticated){%>
-      <li>
-        <a href="/profile"> <%=user.name%> </a>
-      </li>
-      <li>
-        <div class="control1">
-          <form action="/logout" method="post">
-            <input type="submit" value="Logout" />
-          </form>
-        </div>
-      </li>
-      <% }else{ %>
-      <li><a href="/login">Login </a></li>
-      <% } %>
-    </ul>
-  </div>
-  <i class="fa fa-bars" onclick="showMenu()"></i>
+    <a href="/"><img src="images/logo.jpg" width="105" height="98" /></a>
+    <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/review">Review</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact Us </a></li>
+            <% if(isAuthenticated){%>
+                <li>
+                    <a href="/profile">
+                        <%=user.name%>
+                    </a>
+                </li>
+                <li>
+                    <div class="control1">
+                        <form action="/logout" method="post">
+                            <input type="submit" value="Logout" />
+                        </form>
+                    </div>
+                </li>
+                <% }else{ %>
+                    <li><a href="/login">Login </a></li>
+                    <% } %>
+        </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
 </nav>
