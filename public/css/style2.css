@@ -2,7 +2,9 @@
 *>* {
     font-family: 'Poppins', sans-serif;
 }
-
+body{
+    background-image: url("/images/bg1.jpg");
+}
 :root {
     --color-dark: #0b0218;
     --color-secondary-dark: #464c70;
