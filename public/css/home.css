@@ -7,12 +7,12 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("images/home.jpg");
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("/images/home.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
 }
-
+/* 
 nav {
     display: flex;
     padding: 2% 6%;
@@ -54,7 +54,7 @@ nav img {
 
 .nav-links ul li:hover::after {
     width: 100%;
-}
+} */
 
 .text-box {
     width: 90%;
@@ -237,7 +237,7 @@ h3 {
 .cta {
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/app.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/app.jpg');
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -268,7 +268,7 @@ h3 {
     width: 100%;
     text-align: center;
     padding: 30px 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/security.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/security.jpeg');
 }
 
 .footer h2 {

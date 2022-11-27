@@ -1,151 +1,190 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hacktekers |Lnow about our team</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-        }
-        
-        html {
-            box-sizing: border-box;
-        }
-        
-        *,
-        *:before,
-        *:after {
-            box-sizing: inherit;
-        }
-        
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        background-color: #000;
+        color: #fff;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+        border: 2px #fff;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+        margin: 8px;
+      }
+
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #030303;
+        color: white;
+      }
+
+      .container {
+        padding: 0 16px;
+        text-align: center;
+      }
+
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: rgb(225, 225, 225);
+      }
+
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: rgb(255, 96, 96);
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .button:hover {
+        background-color: rgb(173, 173, 173);
+      }
+
+      @media screen and (max-width: 650px) {
         .column {
-            float: left;
-            width: 33.3%;
-            margin-bottom: 16px;
-            padding: 0 8px;
+          width: 100%;
+          display: block;
         }
-        
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            margin: 8px;
-        }
-        
-        .about-section {
-            padding: 50px;
-            text-align: center;
-            background-color: #474e5d;
-            color: white;
-        }
-        
-        .container {
-            padding: 0 16px;
-            text-align: center;
-        }
-        
-        .container::after,
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-        
-        .title {
-            color: grey;
-        }
-        
-        .button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-        }
-        
-        .button:hover {
-            background-color: #555;
-        }
-        
-        @media screen and (max-width: 650px) {
-            .column {
-                width: 100%;
-                display: block;
-            }
-        }
+      }
     </style>
-</head>
+    <link rel="stylesheet" href="css/navbar.css" />
+  </head>
 
-<body>
-
+  <body>
+    <%- include('partials/navbar') %>
     <div class="about-section">
-        <h1>About Us Page</h1>
-        <h2>
-            <U>HACKTEKERS</U>
-        </h2>
-        <p>Some text about who we are and what we do.</p>
-        <p>Resize the browser window to see that this page is responsive by the way.</p>
+      <h1>About Us Page</h1>
+      <h2>
+        <U>HACKTEKERS</U>
+      </h2>
+      <p>Some text about who we are and what we do.</p>
+      <p>
+        Resize the browser window to see that this page is responsive by the
+        way.
+      </p>
     </div>
 
-    <h2 style="text-align:center">Our Team</h2>
+    <h2 style="text-align: center">Our Team</h2>
     <div class="row">
-        <div class="column">
-            <div class="card">
-                <img src="images/pankhuri.png" alt="Pankhuri Parashar" style="width:50%">
-                <div class="container">
-                    <h2>Pankhuri Parashar</h2>
-                    <p class="title">CEO & Founder</p>
-                    <p>Pankhuri Parashar is an entrepreneur <br>and Growth Hacker with more than 2 years of<br> expertise in Data Driven Science.<br> she is a high energy individual fueled by <br>her passion for helping buisness growth digitally.</p>
-                    <p>Pankhuri@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
+      <div class="column">
+        <div class="card">
+          <img
+            src="images/pankhuri.png"
+            alt="Pankhuri Parashar"
+            style="width: 50%"
+          />
+          <div class="container">
+            <h2>Pankhuri Parashar</h2>
+            <p class="title">CEO & Founder</p>
+            <p>
+              Pankhuri Parashar is an entrepreneur <br />and Growth Hacker with
+              more than 2 years of<br />
+              expertise in Data Driven Science.<br />
+              she is a high energy individual fueled by <br />her passion for
+              helping buisness growth digitally.
+            </p>
+            <p>Pankhuri@gmail.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
         </div>
+      </div>
 
-        <div class="column">
-            <div class="card">
-                <img src="images/shreya.webp" alt="Shreya Saran" style="width:42%">
-                <div class="container">
-                    <h2>Shreya Saran</h2>
-                    <p class="title">CEO & Founder</p>
-                    <p>Shreya Saran is a creative lead at Hacktekers and worked across a variety<br> of brand and lead the creative sessions<br> for the projects kick off.She has managed multiple<br> projects from concept through competition.</p>
-                    <p>Shreya@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
+      <div class="column">
+        <div class="card">
+          <img src="images/shreya.webp" alt="Shreya Saran" style="width: 42%" />
+          <div class="container">
+            <h2>Shreya Saran</h2>
+            <p class="title">CEO & Founder</p>
+            <p>
+              Shreya Saran is a creative lead at Hacktekers and worked across a
+              variety<br />
+              of brand and lead the creative sessions<br />
+              for the projects kick off.She has managed multiple<br />
+              projects from concept through competition.
+            </p>
+            <p>Shreya@gmail.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
         </div>
+      </div>
 
-        <div class="column">
-            <div class="card">
-                <img src="images/suruchi__.jpeg" alt="Suruchi Kumari" style="width:46%">
-                <div class="container">
-                    <h2>Suruchi Kumari</h2>
-                    <p class="title">Web Developer</p>
-                    <p>Suruchi Kumari is a web Developer at Hacktekers.<br>She has worked to design and extablish user-friendly website.<br>She has a working experience in organising seminars on various <br> hacking related topics</p>
+      <div class="column">
+        <div class="card">
+          <img
+            src="images/suruchi__.jpeg"
+            alt="Suruchi Kumari"
+            style="width: 46%"
+          />
+          <div class="container">
+            <h2>Suruchi Kumari</h2>
+            <p class="title">Web Developer</p>
+            <p>
+              Suruchi Kumari is a web Developer at Hacktekers.<br />She has
+              worked to design and extablish user-friendly website.<br />She has
+              a working experience in organising seminars on various <br />
+              hacking related topics
+            </p>
 
-                    <p>suruchi@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
+            <p>suruchi@gmail.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
         </div>
+      </div>
 
-        <div class="column">
-            <div class="card">
-                <img src="images/SuneoShoab.webp" alt="Shoab AKhtar" style="width: 40%">
-                <div class="container">
-                    <h2>Shoab Akhtar</h2>
-                    <p class="title">Hacker</p>
-                    <p>Shoab works as a Ethical <br>Hacker at Hacktekers<br>.He is one of the expert of our<br> team who has his e<br>xpertise in Network Security<br>,Ethical Hacking and Cyber Security. </p>
-                    <p>shoab@gmail.com</p>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
+      <div class="column">
+        <div class="card">
+          <img
+            src="images/SuneoShoab.webp"
+            alt="Shoab AKhtar"
+            style="width: 40%"
+          />
+          <div class="container">
+            <h2>Shoab Akhtar</h2>
+            <p class="title">Hacker</p>
+            <p>
+              Shoab works as a Ethical <br />Hacker at Hacktekers<br />.He is
+              one of the expert of our<br />
+              team who has his e<br />xpertise in Network Security<br />,Ethical
+              Hacking and Cyber Security.
+            </p>
+            <p>shoab@gmail.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
         </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

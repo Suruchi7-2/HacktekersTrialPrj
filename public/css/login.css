@@ -12,7 +12,7 @@ section{
     position:relative;
     height: 100vh;
     width: 100%;
-    /* background: url(../img/zolo-mask.jpg) no-repeat center center/cover; */
+    background: url(../img/zolo-mask.jpg) no-repeat center center/cover;
     background-size: cover;
 }
 
@@ -27,7 +27,7 @@ section{
     padding: 50px 30px;
     border-radius: 10px;
     box-shadow: 7px 7px 60px #fff;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 h1{
@@ -116,3 +116,4 @@ a:link {
     text-decoration: none;
   }
    */
+
